@@ -1,0 +1,289 @@
+// Google Font
+
+
+
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body copy:      14px "Manrope", sans-serif;
+Headers:        36px "Manrope", sans-serif;
+Input, textarea:    14px "Manrope", sans-serif;
+Sidebar Menu:    24px "Manrope", sans-serif;
+
+---------------------------------------------------------------------
+
+[Color codes]
+
+Background: #ffffff (white) & #f7fbfe (light blue)
+Primary: #0dd7f7 (Light green) 
+Secondary: #0c3d71 (dark blue)
+Content text:   var(--lightColorMedium) #767e90 (light template) &  #fff9;(dark template)
+Header h1:  #394153 (dark grey)
+Header h2:  #394153 (dark grey)
+Button:     #0c3d71 (dark blue)
+
+a (standard):   #394153 (dark grey)
+a (visited):    #394153 (dark grey)
+a (active):     #394153 (dark grey)
+
+
+-------------------------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;700&family=Manrope:wght@200;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;0,900;1,400&display=swap');;
+$paragraph: "Manrope",sans-serif;
+$headings: "Manrope",sans-serif;
+$headings-v-two: 'Playfair Display', serif;
+$headings-v-three: 'Poppins', sans-serif;
+
+
+$empty: transparent;
+$default: #d6d6d6;
+$primary: #0dd7f7; 
+$primary-light: #99EAFC;
+
+$secondary: #0c3d71;
+$third: #F800C1;
+$white-smoke: #f7fbfe;
+$text-color-dark:#394153;
+$success: #2dce89;
+$info: #11cdef;
+$warning: #fb6340;
+$danger: #f5365c;
+$muted: #6c757d;
+$inverse: #4c5667;
+$purple: #BF55EC;
+$pink: #f76397;
+$white: #ffffff;
+$dark: #212121;
+$grey: #9aa0ac;
+$aqua: #3ec5d6;
+$blue: #28BAE5;
+$light-blue: #89CFF0;
+$teal: #008081;
+$yellow: #F7CA18;
+$orange: #FF8000;
+$green: #26C281;
+$lime: #cad900;
+$red: #F22613;
+$fuchsia: #df2de3;
+$navy: #000080;
+$dark-blue: #23272F;
+
+$template: #ef4153;
+$facebook: #3b579d;
+$twitter: #1da1f2;
+$dribbble: #ea4c89;
+$linkedin: #0177b4;
+$google: #dc4a38;
+$instagram: #fb3958;
+$behance: #053eff;
+$element-color: 'primary'$primary,
+'warning'$warning,
+'danger'$danger,
+'success'$success,
+'inverse'$inverse,
+'info'$info;
+// dark and light template color settings
+html {
+    background: var(--lightBg);
+    --lightBtn: #F800C1;
+    --lightBg: #ffffff;
+    --lightBgIcon: #ffffff;
+    --lightBgMedium: #f7fbfe;
+    --lightBgNewsFeed: #ebf3f9;
+    --lightColor: #394153;
+    --lightColorMedium: #666666;
+    --opacityBg: 1;
+    --hero-bg-v-two: #4e8e9615;
+    --bg-v-two-opacity: 0.5;
+    --bg-v-two-footer:  #f7fbfeb8;
+    --bg-v-three:#a6e2ef;
+    --bg-top-menu-v3:rgba(255, 255, 255, 0.8);
+   
+
+    &[data-template='dark'] {
+        background: var(--lightBg);
+        --lightBtn:  #0dd7f7;
+        --lightBg: #232323;
+        --lightBgIcon: #333333;
+        --lightBgMedium: #202020;
+        --lightBgNewsFeed: #2C2C2C;
+        --lightColor: #fffffff7;
+        --lightColorMedium: #fff9;
+        --opacityBg: 0.2;
+        --hero-bg-v-two: #000000a9;
+        --bg-v-two-opacity: 0.05;
+        --bg-v-two-footer:  rgba(0,0,0,0.8);
+        --bg-v-three:#121212;
+        --bg-top-menu-v3:#232323;
+
+    }
+
+    &[data-template='dark'] #hero {
+        mix-blend-mode: screen;
+
+        &::before {
+            opacity: 0.3;
+        }
+
+    }
+
+    &[data-template='dark'] #header {
+        .logo {
+            img {
+                filter: grayscale(1) invert(1);
+
+            }
+        }
+
+    }
+
+    &[data-template='dark'] .clients img {
+        filter: grayscale(1) invert(1);
+    }
+
+    &[data-template='dark'] .testimonials {
+        background-image: url(../img/feature-bg.svg);
+    }
+
+    &[data-template='dark'] #footer {
+        background: #202020;
+    }
+    &[data-template='dark'] .testimonials {
+        .testimonial-item {
+
+
+            .quote-icon-left {
+                color: #e1f0fa0d;
+            }
+        }
+
+    }
+    &[data-template='dark'] .hero-v-two {
+        .name-headline-v-two{
+            .mouse-icon {
+                filter:invert(0);
+                
+            }
+        }     
+    }
+      
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label {
+    height: 40px;
+    width: 40px;
+    display: block;
+    padding: 0;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    background: #212529;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 20px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 36px;
+    @include mq('phone', 'max') {
+        left: -36px;
+
+    }
+    @include mq('phone-wide', 'max') {
+        left: -36px;
+
+    }
+    @include mq('iphone', 'max') {
+        left: -36px;
+
+    }
+    @include mq('iphone-x', 'max') {
+        left: -36px;
+
+    }
+
+    @include mq('tablet', 'min') { 
+        left: -36px;
+    }
+
+    @include mq('tablet-wide', 'min') {
+        left: -36px;
+    }
+
+    
+
+
+
+    &:before {
+
+        content: "\F1BF";
+        display: inline-block;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'remixicon' !important;
+    }
+}
+
+input[type=checkbox]:checked+label {
+    &:before {
+        content:"\EF6F";
+        display: inline-block;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'remixicon' !important;
+    }
+}
+
+
+
+input:checked+label {
+   color: #ffffff;
+    border: none;
+    box-shadow: 0 3px 30px 0 rgba(30, 93, 233, 0.56);
+    background-color: $primary;
+   
+
+    &:after {
+        left: calc(100% - 5px);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+html.transition {
+    transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 420ms !important;
+    transition-delay: 0 !important;
+
+    * {
+        transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 420ms !important;
+        transition-delay: 0 !important;
+
+        &:before,
+        &:after {
+            transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 420ms !important;
+            transition-delay: 0 !important;
+        }
+    }
+}
+.vbox-container{
+    overflow-y: hidden!important;
+    max-height: 92%!important;
+    img{
+        border-radius: 0;
+    }
+}

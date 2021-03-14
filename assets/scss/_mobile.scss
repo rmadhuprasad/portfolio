@@ -1,0 +1,23 @@
+@include mq('phone-wide', 'max') {
+    // phonebook
+
+  }
+
+  @include mq('tablet-small', 'max') {
+  
+  }
+
+  @include mq('desktop', 'max') {
+    // tablet & notebook
+  
+  }
+
+  @include mq('tablet', 'max') {
+    //phone landscape
+
+  }
+  @include mq('tablet-medium', 'max') {
+    //ipad potrait
+
+
+  }
